@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 /**
  *
  */
-public class UpdateSummonerStatusJob implements Job{
+public class RetrieveOutdatedSummonerListJob implements Job{
     private static Logger _log = LoggerFactory.getLogger(LeagueAPIScraperJob.class);
 
     /**
@@ -25,7 +25,7 @@ public class UpdateSummonerStatusJob implements Job{
      * scheduler can instantiate the class whenever it needs.
      * </p>
      */
-    public UpdateSummonerStatusJob()
+    public RetrieveOutdatedSummonerListJob()
     {
 
     }

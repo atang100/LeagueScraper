@@ -5,18 +5,35 @@ package scheduler.commandObject;
  */
 public class Summoner {
 
-    String summonerId;
+    private final String summonerId;
 
-    public Summoner()
+    private Summoner(String summonerId)
     {
-
+        this.summonerId = summonerId;
     }
 
     public String getSummonerId() {
         return summonerId;
     }
 
-    public void setSummonerId(String summonerId) {
-        this.summonerId = summonerId;
+    public static class SummonerBuilder
+    {
+        private String summonerId;
+
+        public SummonerBuilder()
+        {
+
+        }
+
+        public SummonerBuilder summonerId(final String summonerId)
+        {
+            this.summonerId = summonerId;
+            return this;
+        }
+
+        public Summoner createSummoner()
+        {
+            return new Summoner(summonerId);
+        }
     }
 }

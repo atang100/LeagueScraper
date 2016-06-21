@@ -20,18 +20,12 @@ public class Summoner {
     {
         private String summonerId;
 
-        public SummonerBuilder()
-        {
-
-        }
-
-        public SummonerBuilder summonerId(final String summonerId)
+        public SummonerBuilder(final String summonerId)
         {
             this.summonerId = summonerId;
-            return this;
         }
 
-        public Summoner createSummoner()
+        public Summoner build()
         {
             return new Summoner(summonerId);
         }

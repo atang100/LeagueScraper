@@ -16,11 +16,18 @@ public class SummonerStore {
         this.summoners = summoners;
     }
 
-    public ArrayList<Summoner> getSummoners() {
+    public ArrayList<Summoner> getSummoners()
+    {
         return summoners;
     }
 
-    public void setSummoners(ArrayList<Summoner> summoners) {
+    public void setSummoners(ArrayList<Summoner> summoners)
+    {
         this.summoners = summoners;
+    }
+
+    public boolean isEmpty()
+    {
+        return summoners.isEmpty();
     }
 }

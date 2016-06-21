@@ -44,6 +44,11 @@ public class Store {
         }
     }
 
+    public static boolean isSummonerStoreEmpty()
+    {
+        return summonerStoreList.isEmpty();
+    }
+
     public static SummonerStore getSummonerStore()
     {
         if (!summonerStoreList.isEmpty()) {

@@ -22,6 +22,8 @@ public class TaskScheduler {
 
         Scheduler sched = sf.getScheduler();
 
+        sched.getListenerManager().addSchedulerListener(new TaskSchedulerListener(sched));
+
         JobDetail leagueAPIScraperJob = newJob(LeagueAPIScraperJob.class).withIdentity("job1", "group1").build();
         Trigger leagueAPIScraperJobTrigger = newTrigger().withIdentity("trigger1", "group1").build();
 

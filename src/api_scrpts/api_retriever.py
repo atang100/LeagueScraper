@@ -12,7 +12,6 @@ def get_summoners_by_name(summoners, region):
     summoners_list = []
     for key, value in response.items():
         summoners_list.append(value)
-    print(summoners_list)
     return summoners_list
 
 def get_recent_matches_by_id(summoner_id, region):
